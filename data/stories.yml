@@ -41,7 +41,7 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: repair_hull
-  - action: utter_repair_hull
+  - action: action_repair_hull
   - action: utter_did_that_help
   - intent: no_repair_required
   - action: utter_no_repair_required
@@ -96,7 +96,7 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: repair_hull 
-  - action: utter_repair_hull
+  - action: action_repair_hull
   - action: utter_did_that_help
   - intent: no_repair_required
   - action: utter_no_repair_required
