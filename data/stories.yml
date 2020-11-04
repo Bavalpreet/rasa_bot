@@ -64,6 +64,18 @@ stories:
   - intent: thankyou
   - action: utter_thankyou
 
+- story: ask not_starting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: not_starting
+  - action: utter_not_starting
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: thankyou
+  - action: utter_thankyou
+
 - story: ask out_of_scope
   steps:
   - intent: out_of_scope
