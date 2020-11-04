@@ -156,6 +156,14 @@ nlu:
     - major issues with deck fittings and core is getting damaged
     - core repair can you help me
 
+- intent: not_starting
+  examples: |
+    - my engine is not starting
+    - my boat is not starting
+    - When i turned the key on my boat nothing happens
+    - Why my boat is suddenly not starting
+    - help! my outboard won't start
+
 - intent: out_of_scope
   examples: |
     - i have changed my mind
