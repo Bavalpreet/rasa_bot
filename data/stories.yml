@@ -40,8 +40,10 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: repair_hull
-  - action: action_repair_hull
+  # - intent: repair_hull
+  # - action: action_repair_hull
+  - intent: repair
+  - action: action_repair
   - action: utter_did_that_help
   - intent: no_repair_required
   - action: utter_no_repair_required
@@ -54,8 +56,10 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: repair_core
-  - action: utter_repair_core
+  - intent: repair
+  # - intent: repair_core
+  # - action: utter_repair_core
+  - action: action_repair
   - action: utter_did_that_help
   - intent: no_repair_required
   - action: utter_no_repair_required
@@ -107,8 +111,10 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: repair_hull 
-  - action: action_repair_hull
+  # - intent: repair_hull 
+  # - action: action_repair_hull
+  - intent: repair
+  - action: action_repair
   - action: utter_did_that_help
   - intent: no_repair_required
   - action: utter_no_repair_required
