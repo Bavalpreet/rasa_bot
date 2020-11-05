@@ -21,6 +21,8 @@ entities:
   - exercise
   - sleep
   - stress
+  - boat_length
+  - boat_model
 
 intents:
   - cleaning_boat
@@ -39,10 +41,14 @@ intents:
   - bot_challenge
   - not_starting
 
+slots:
+  boat_manufacturer:
+    type: text
+
 responses:
   utter_cleaning_boat:
-    - text: "you can check out the boat cleaning product range from this website https://stage.getaboatbox.com/smart-products/"
-    - text: "You can use boat foam to clean any outer part of your boat."
+    - text: "Have a look at cleaning product range from this website https://stage.getaboatbox.com/smart-products/ for your {boat_manufacturer} boat"
+    - text: "You can use boat foam to clean any outer part of your {boat_manufacturer} boat."
 
   utter_no_repair_required:
     - text: "Happy that i could help you :)"

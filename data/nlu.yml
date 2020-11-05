@@ -163,17 +163,17 @@ nlu:
 
 - intent: cleaning_boat
   examples: |
-    - can you help me cleaning
-    - Hi pls help me with cleaning
-    - cleaning products suggestions
-    - wax removal tips pls
+    - can you help me cleaning my [actioncraft](boat_manufacturer)
+    - Hi pls help me with cleaning my [sea pro](boat_manufacturer) [center console](boat_model).
+    - cleaning products suggestions for 2014 made [19'](boat_length) [prowler](boat_manufacturer).
+    - wax removal tips for my [24'](boat_length) [cobra](boat_manufacturer) pls
     - i want to remove stains from my [robalo](boat_manufacturer)
     - wanted to clean my [ranger](boat_manufacturer) can you help
     - hey can yoou help me cleaning  my outer parts of boat
     - needed some equipments to clean my [gradywhite](boat_manufacturer)
-    - huge marks on my 22 ft boat how to clean it.
-    - dirty stains on my 26 foot [robalo](boat_manufacturer) how to remove them
-    - how to remove wax from my boat
+    - huge marks on my [22 ft](boat_length) [maycraft](boat_manufacturer) how to clean it.
+    - dirty stains on my [26 foot](boat_length) [robalo](boat_manufacturer) how to remove them
+    - how to remove wax from my [carolina skiff](boat_manufacturer) [255](boat_model).
 
 - intent: not_starting
   examples: |
