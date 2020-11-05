@@ -16,8 +16,37 @@ nlu:
     - Hmmm no issues with any boat part
     - yeah it's good to go
 
-- intent: repair_hull
+# - intent: repair_hull
+#   examples: |
+#     - I have issues with my [hull](boat_part)
+#     - my [hull](boat_part) is damaged.
+#     - [hull](boat_part) damaged completely.
+#     - [hull](boat_part) destroyed completely.
+#     - I have minor issues with my [hull](boat_part)
+#     - cracks in my [hull](boat_part)
+#     - major issues with fibreglass of [hull](boat_part)
+#     - [hull](boat_part) repair can you help me
+#     - can you suggest some tips to repair my [hull](boat_part)
+
+# - intent: repair_core
+#   examples: |
+#     - I have issues with my [core](boat_part) can u help
+#     - my [core](boat_part) is damaged need some tips.
+#     - [core](boat_part) damaged completely.
+#     - I have minor issues with my [core](boat_part)
+#     - water entering through hull fittings in my [core](boat_part) pls help
+#     - major issues with deck fittings and [core](boat_part) is getting damaged
+#     - [core](boat_part) repair can you help me
+#
+- intent: repair
   examples: |
+    - I have issues with my [core](boat_part) can u help
+    - my [core](boat_part) is damaged need some tips.
+    - [core](boat_part) damaged completely.
+    - I have minor issues with my [core](boat_part)
+    - water entering through hull fittings in my [core](boat_part) pls help
+    - major issues with deck fittings and [core](boat_part) is getting damaged
+    - [core](boat_part) repair can you help me
     - I have issues with my [hull](boat_part)
     - my [hull](boat_part) is damaged.
     - [hull](boat_part) damaged completely.
@@ -145,16 +174,6 @@ nlu:
     - huge marks on my 22 ft boat how to clean it.
     - dirty stains on my 26 foot [robalo](boat_manufacturer) how to remove them
     - how to remove wax from my boat
-
-- intent: repair_core
-  examples: |
-    - I have issues with my core can u help
-    - my core is damaged need some tips.
-    - core damaged completely.
-    - I have minor issues with my core
-    - water entering through hull fittings in my core pls help
-    - major issues with deck fittings and core is getting damaged
-    - core repair can you help me
 
 - intent: not_starting
   examples: |

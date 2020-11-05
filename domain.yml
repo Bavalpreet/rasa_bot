@@ -8,8 +8,9 @@ actions:
   - utter_happy
   - utter_no_repair_required
   - utter_out_of_scope
-  - utter_repair_core
+  # - utter_repair_core
   - action_repair_hull
+  - action_repair
   - utter_stress_info
   - utter_thankyou
   - utter_not_starting
@@ -24,7 +25,7 @@ entities:
 intents:
   - cleaning_boat
   - no_repair_required
-  - repair_hull
+  # - repair_hull
   - greet
   - goodbye
   - thankyou
@@ -32,7 +33,8 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  - repair_core
+  # - repair_core
+  - repair
   - out_of_scope
   - bot_challenge
   - not_starting
@@ -51,8 +53,8 @@ responses:
     - text: "Ok can you please provide me some relevant info so that I can help you."
     - text: "Sorry But i couldn't understand it."
 
-  utter_repair_core:
-    - text: "Core damage primarily happens due to the intrusion of water through hull-fittings or deck-fittings"
+  # utter_repair_core:
+  #   - text: "Core damage primarily happens due to the intrusion of water through hull-fittings or deck-fittings"
 
   utter_not_starting:
     - text: "It’s most likely an electrical issue.Start by checking your kill switch. Shift into neutral, and examine the actual starter switch to see if it’s loose. Tighten up any retaining screws to fasten the switch back into place. If it groans without starting, it might be a poor connection or a low battery. Get these checked out, and remember to inspect, clean and replace your ignition system components"
