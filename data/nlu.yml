@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: no_repair_required
   examples: |
@@ -15,29 +14,6 @@ nlu:
     - perfectly fine working
     - Hmmm no issues with any boat part
     - yeah it's good to go
-
-# - intent: repair_hull
-#   examples: |
-#     - I have issues with my [hull](boat_part)
-#     - my [hull](boat_part) is damaged.
-#     - [hull](boat_part) damaged completely.
-#     - [hull](boat_part) destroyed completely.
-#     - I have minor issues with my [hull](boat_part)
-#     - cracks in my [hull](boat_part)
-#     - major issues with fibreglass of [hull](boat_part)
-#     - [hull](boat_part) repair can you help me
-#     - can you suggest some tips to repair my [hull](boat_part)
-
-# - intent: repair_core
-#   examples: |
-#     - I have issues with my [core](boat_part) can u help
-#     - my [core](boat_part) is damaged need some tips.
-#     - [core](boat_part) damaged completely.
-#     - I have minor issues with my [core](boat_part)
-#     - water entering through hull fittings in my [core](boat_part) pls help
-#     - major issues with deck fittings and [core](boat_part) is getting damaged
-#     - [core](boat_part) repair can you help me
-#
 - intent: repair
   examples: |
     - I have issues with my [core](boat_part) can u help
@@ -56,7 +32,6 @@ nlu:
     - major issues with fibreglass of [hull](boat_part)
     - [hull](boat_part) repair can you help me
     - can you suggest some tips to repair my [hull](boat_part)
-
 - intent: greet
   examples: |
     - hey
@@ -76,7 +51,6 @@ nlu:
     - heya
     - how's you doing boatbox
     - how are you boatbox
-
 - intent: goodbye
   examples: |
     - good afternoon
@@ -90,7 +64,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: thankyou
   examples: |
     - Thankyou it worked
@@ -107,7 +80,6 @@ nlu:
     - your suggestions worked out
     - nice tip
     - thnx
-
 - intent: affirm
   examples: |
     - yes
@@ -116,7 +88,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -126,7 +97,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -143,7 +113,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -160,7 +129,6 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: cleaning_boat
   examples: |
     - can you help me cleaning my [actioncraft](boat_manufacturer)
@@ -172,7 +140,6 @@ nlu:
     - huge marks on my [22 ft](boat_length) [maycraft](boat_manufacturer) how to clean it.
     - dirty stains on my [26 foot](boat_length) [robalo](boat_manufacturer) how to remove them
     - how to remove wax from my [carolina skiff](boat_manufacturer) [255](boat_model)
-
 - intent: not_starting
   examples: |
     - my engine is not starting
@@ -180,7 +147,6 @@ nlu:
     - When i turned the key on my boat nothing happens
     - Why my boat is suddenly not starting
     - help! my outboard won't start
-
 - intent: out_of_scope
   examples: |
     - i have changed my mind
@@ -193,7 +159,6 @@ nlu:
     - I want to get car for delivery
     - from where can i buy new mobile phone
     - can you suggest me some grocery shopping places
-
 - intent: demo_intent
   examples: |
     - what to do my odometer is not working?
@@ -203,7 +168,7 @@ nlu:
     - odometer is showing wrong results
     - [Livewell](boat_part) is working fine but no water was coming out?
     - no water is pumped out but [livewell pump](boat_part) worked ok
-    - [Livewell pump](boat_part) ok but no water pumped 
+    - [Livewell pump](boat_part) ok but no water pumped
     - Will yamaha fuel management system work on optimax?
     - can i use Yamaha fuel managment on my Optimax?
     - I want to use Yamaha Fuel Management on optimax will it be ok?
@@ -211,8 +176,7 @@ nlu:
     - What is hypoid gear oil?
     - hypoid gear oil what is it?
     - can you tell me something about hypoid gear oil?
-
-
+    - i am using [robalo](boat_manufacturer) boats from past 10 years , yester me and my wife made a plan to go for fishing, when today we went for fishing suddenly my odometer stops working what to do now?
 - intent: bot_challenge
   examples: |
     - are you a bot?

@@ -129,3 +129,13 @@ stories:
     - action: action_greet
     - intent: demo_intent
     - action: action_demo
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: demo_intent
+    entities:
+    - boat_manufacturer: robalo
+  - slot_was_set:
+    - boat_manufacturer: robalo
+  - action: action_demo
