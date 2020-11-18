@@ -11,6 +11,8 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import pandas as pd
+from sentence_transformers import SentenceTransformer, util
 #
 #
 # class ActionHelloWorld(Action):
@@ -65,3 +67,56 @@ class Action_repair(Action):
         dispatcher.utter_message(text=message)
 
         return []
+
+class ActionGreet(Action):
+
+    def name(self) -> Text:
+        return "action_greet"
+    
+    def run(self ,dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
+
+            dispatcher.utter_message(text="hi boat manufacturer which boat you are using , how may i help you?")
+
+            return []
+
+    def loader(self):
+        model = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
+        df=pd.read_csv('/home/bavalpreet/Downloads/boatbox/faq-rasa.csv')
+        sentences=df['Questions'].str.replace("\n", "", case = False).tolist()
+        solutions=df['Answers'].str.replace("\n", "", case = False).tolist()
+
+        embeddings = model.encode(sentences)
+
+        return [model,embeddings,solutions]
+
+
+class ActionDemo(ActionGreet):
+
+    def name(self) -> Text:
+        return "action_demo"
+    
+    def run(self ,dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text,Any]) -> List[Dict[Text,Any]]: 
+
+
+            model,embeddings,solutions = ActionGreet.loader(self)
+
+            message=tracker.latest_message['text']
+
+            test=model.encode(message)
+
+            for i in range(len(solutions)):
+                cos_sim = util.pytorch_cos_sim(test, embeddings)
+                
+            cos_sim=cos_sim.tolist()
+            print(cos_sim)
+            sol_index=cos_sim[0].index(max(cos_sim[0]))
+
+            solution=solutions[sol_index]
+            print(solution)
+            dispatcher.utter_message(text=solution)
+
+            return []
