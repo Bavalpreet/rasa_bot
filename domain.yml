@@ -4,13 +4,15 @@ actions:
   - utter_cleaning_boat
   - utter_did_that_help
   - utter_goodbye
-  - utter_greet
+  #- utter_greet
   - utter_happy
   - utter_no_repair_required
   - utter_out_of_scope
   # - utter_repair_core
   - action_repair_hull
   - action_repair
+  - action_greet
+  - action_demo
   - utter_stress_info
   - utter_thankyou
   - utter_not_starting
@@ -23,6 +25,7 @@ entities:
   - stress
   - boat_length
   - boat_model
+  - year_of_manufacturing
 
 intents:
   - cleaning_boat
@@ -40,6 +43,7 @@ intents:
   - out_of_scope
   - bot_challenge
   - not_starting
+  - demo_intent
 
 slots:
   boat_manufacturer:
@@ -65,9 +69,9 @@ responses:
   utter_not_starting:
     - text: "It’s most likely an electrical issue.Start by checking your kill switch. Shift into neutral, and examine the actual starter switch to see if it’s loose. Tighten up any retaining screws to fasten the switch back into place. If it groans without starting, it might be a poor connection or a low battery. Get these checked out, and remember to inspect, clean and replace your ignition system components"
 
-  utter_greet:
-    - text: "Hi how can i help you with your boat"
-    - text: "I am Boatbox I can help you for various tasks like boat repair to installations"
+  # utter_greet:
+  #   - text: "hi boat manufacturer which boat you are using , how may i help you?"
+  #   - text: "I am Boatbox I can help you for various tasks like boat repair to installations, which boat you are using ?"
 
   utter_cheer_up:
     - text: "Here is something to cheer you up:"

@@ -5,14 +5,14 @@ stories:
 - story: happy path
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_greet
   - intent: mood_great
   - action: utter_happy
 
 - story: sad path 1
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -22,7 +22,7 @@ stories:
 - story: sad path 2
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -39,7 +39,7 @@ stories:
 - story: ask repair_hull
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_greet
   # - intent: repair_hull
   # - action: action_repair_hull
   - intent: repair
@@ -55,7 +55,7 @@ stories:
 - story: ask repair_core
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_greet
   - intent: repair
   # - intent: repair_core
   # - action: utter_repair_core
@@ -71,7 +71,7 @@ stories:
 - story: ask not_starting
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_greet
   - intent: not_starting
   - action: utter_not_starting
   - action: utter_did_that_help
@@ -100,7 +100,7 @@ stories:
 - story: interactive_story_1
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_greet
   - intent: cleaning_boat 
   - action: utter_cleaning_boat
   - action: utter_did_that_help
@@ -110,7 +110,7 @@ stories:
 - story: no_repair_story
   steps:
   - intent: greet
-  - action: utter_greet
+  - action: action_greet
   # - intent: repair_hull 
   # - action: action_repair_hull
   - intent: repair
@@ -122,3 +122,10 @@ stories:
   - action: utter_thankyou
   - intent: goodbye
   - action: utter_goodbye
+
+- story: demo
+  steps:
+    - intent: greet
+    - action: action_greet
+    - intent: demo_intent
+    - action: action_demo

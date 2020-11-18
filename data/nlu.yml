@@ -164,16 +164,14 @@ nlu:
 - intent: cleaning_boat
   examples: |
     - can you help me cleaning my [actioncraft](boat_manufacturer)
-    - Hi pls help me with cleaning my [sea pro](boat_manufacturer) [center console](boat_model).
-    - cleaning products suggestions for 2014 made [19'](boat_length) [prowler](boat_manufacturer).
-    - wax removal tips for my [24'](boat_length) [cobra](boat_manufacturer) pls
+    - Hi pls help me with cleaning my [sea pro](boat_manufacturer) [center console](boat_model)
     - i want to remove stains from my [robalo](boat_manufacturer)
     - wanted to clean my [ranger](boat_manufacturer) can you help
-    - hey can yoou help me cleaning  my outer parts of boat
+    - hey can yoou help me cleaning my outer parts of boat
     - needed some equipments to clean my [gradywhite](boat_manufacturer)
     - huge marks on my [22 ft](boat_length) [maycraft](boat_manufacturer) how to clean it.
     - dirty stains on my [26 foot](boat_length) [robalo](boat_manufacturer) how to remove them
-    - how to remove wax from my [carolina skiff](boat_manufacturer) [255](boat_model).
+    - how to remove wax from my [carolina skiff](boat_manufacturer) [255](boat_model)
 
 - intent: not_starting
   examples: |
@@ -195,6 +193,25 @@ nlu:
     - I want to get car for delivery
     - from where can i buy new mobile phone
     - can you suggest me some grocery shopping places
+
+- intent: demo_intent
+  examples: |
+    - what to do my odometer is not working?
+    - my odometer is not working what can can i do?
+    - odomter has stopped working.
+    - My odoometer is faulty
+    - odometer is showing wrong results
+    - [Livewell](boat_part) is working fine but no water was coming out?
+    - no water is pumped out but [livewell pump](boat_part) worked ok
+    - [Livewell pump](boat_part) ok but no water pumped 
+    - Will yamaha fuel management system work on optimax?
+    - can i use Yamaha fuel managment on my Optimax?
+    - I want to use Yamaha Fuel Management on optimax will it be ok?
+    - Should i be concerned of using yamaha fm on my optimax?
+    - What is hypoid gear oil?
+    - hypoid gear oil what is it?
+    - can you tell me something about hypoid gear oil?
+
 
 - intent: bot_challenge
   examples: |

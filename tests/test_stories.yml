@@ -7,7 +7,7 @@ stories:
   - user: |
       hello there!
     intent: greet
-  - action: utter_greet
+  - action: action_greet
   - user: |
       amazing
     intent: mood_great
@@ -18,7 +18,7 @@ stories:
   - user: |
       hello there!
     intent: greet
-  - action: utter_greet
+  - action: action_greet
   - user: |
       amazing
     intent: mood_great
@@ -33,7 +33,7 @@ stories:
   - user: |
       hello
     intent: greet
-  - action: utter_greet
+  - action: action_greet
   - user: |
       not good
     intent: mood_unhappy
@@ -49,7 +49,7 @@ stories:
   - user: |
       hello
     intent: greet
-  - action: utter_greet
+  - action: action_greet
   - user: |
       not good
     intent: mood_unhappy
@@ -65,7 +65,7 @@ stories:
   - user: |
       hi
     intent: greet
-  - action: utter_greet
+  - action: action_greet
   - user: |
       very terrible
     intent: mood_unhappy
