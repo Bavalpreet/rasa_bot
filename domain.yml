@@ -1,106 +1,80 @@
-version: "2.0"
-
-actions:
-  - utter_cleaning_boat
-  - utter_did_that_help
-  - utter_goodbye
-  #- utter_greet
-  - utter_happy
-  - utter_no_repair_required
-  - utter_out_of_scope
-  # - utter_repair_core
-  - action_repair_hull
-  - action_repair
-  - action_greet
-  - action_demo
-  - utter_stress_info
-  - utter_thankyou
-  - utter_not_starting
-
-entities:
-  - boat_manufacturer
-  - boat_part
-  - exercise
-  - sleep
-  - stress
-  - boat_length
-  - boat_model
-  - year_of_manufacturing
-
-intents:
-  - cleaning_boat
-  - no_repair_required
-  # - repair_hull
-  - greet
-  - goodbye
-  - thankyou
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  # - repair_core
-  - repair
-  - out_of_scope
-  - bot_challenge
-  - not_starting
-  - demo_intent
-
-slots:
-  boat_manufacturer:
-    type: text
-
-responses:
-  utter_cleaning_boat:
-    - text: "Have a look at cleaning product range from this website https://stage.getaboatbox.com/smart-products/ for your {boat_manufacturer} boat"
-    - text: "You can use boat foam to clean any outer part of your {boat_manufacturer} boat."
-
-  utter_no_repair_required:
-    - text: "Happy that i could help you :)"
-    - text: "That's such a great news CHEERS"
-    - text: "Perfect"
-
-  utter_out_of_scope:
-    - text: "Ok can you please provide me some relevant info so that I can help you."
-    - text: "Sorry But i couldn't understand it."
-
-  # utter_repair_core:
-  #   - text: "Core damage primarily happens due to the intrusion of water through hull-fittings or deck-fittings"
-
-  utter_not_starting:
-    - text: "It’s most likely an electrical issue.Start by checking your kill switch. Shift into neutral, and examine the actual starter switch to see if it’s loose. Tighten up any retaining screws to fasten the switch back into place. If it groans without starting, it might be a poor connection or a low battery. Get these checked out, and remember to inspect, clean and replace your ignition system components"
-
-  # utter_greet:
-  #   - text: "hi boat manufacturer which boat you are using , how may i help you?"
-  #   - text: "I am Boatbox I can help you for various tasks like boat repair to installations, which boat you are using ?"
-
-  utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-    - text: "Did that help you?"
-    - text: "Do you Need any other help."
-    - text: "Can i help you some other way."
-    - text: "Thanks can I help you some other way."
-    - text: "Hope I could help you"
-
-  utter_happy:
-    - text: "Great, carry on!"
-
-  utter_goodbye:
-    - text: "Bye"
-    - text: "Bbye it was nice talking to you."
-    - text: "see you soon"
-
-  utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
-
-  utter_stress_info:
-    - text: "It's ok to be stressed it fun time get some good exercise.But If more stressed get Some YOGA or Brisk walk is perfect as well."
-
-  utter_thankyou:
-    - text: "It was my pleasure to help you hope I can help you in future"
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet
+- demo_intent
+- cleaning_boat
+- no_repair_required
+- goodbye
+- thankyou
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- repair
+- out_of_scope
+- bot_challenge
+- not_starting
+entities:
+- boat_length
+- boat_manufacturer
+- boat_model
+- boat_part
+- exercise
+- sleep
+- stress
+- year_of_manufacturing
+slots:
+  boat_manufacturer:
+    type: text
+    influence_conversation: true
+responses:
+  utter_cleaning_boat:
+  - text: Have a look at cleaning product range from this website https://stage.getaboatbox.com/smart-products/ for your {boat_manufacturer} boat
+  - text: You can use boat foam to clean any outer part of your {boat_manufacturer} boat.
+  utter_no_repair_required:
+  - text: Happy that i could help you :)
+  - text: That's such a great news CHEERS
+  - text: Perfect
+  utter_out_of_scope:
+  - text: Ok can you please provide me some relevant info so that I can help you.
+  - text: Sorry But i couldn't understand it.
+  utter_not_starting:
+  - text: It’s most likely an electrical issue.Start by checking your kill switch. Shift into neutral, and examine the actual starter switch to see if it’s loose. Tighten up any retaining screws to fasten the switch back into place. If it groans without starting, it might be a poor connection or a low battery. Get these checked out, and remember to inspect, clean and replace your ignition system components
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: Do you Need any other help.
+  - text: Can i help you some other way.
+  - text: Thanks can I help you some other way.
+  - text: Hope I could help you
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  - text: Bbye it was nice talking to you.
+  - text: see you soon
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_stress_info:
+  - text: It's ok to be stressed it fun time get some good exercise.But If more stressed get Some YOGA or Brisk walk is perfect as well.
+  utter_thankyou:
+  - text: It was my pleasure to help you hope I can help you in future
+actions:
+- action_demo
+- action_greet
+- action_repair
+- action_repair_hull
+- utter_cleaning_boat
+- utter_did_that_help
+- utter_goodbye
+- utter_happy
+- utter_no_repair_required
+- utter_not_starting
+- utter_out_of_scope
+- utter_stress_info
+- utter_thankyou
+version: '2.0'
