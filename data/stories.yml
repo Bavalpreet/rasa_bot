@@ -2,33 +2,6 @@ version: "2.0"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: action_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: action_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: action_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-
 - story: say goodbye
   steps:
   - intent: goodbye
@@ -40,10 +13,8 @@ stories:
   steps:
   - intent: greet
   - action: action_greet
-  # - intent: repair_hull
-  # - action: action_repair_hull
   - intent: repair
-  - action: action_repair
+  - action: action_faq
   - action: utter_did_that_help
   - intent: no_repair_required
   - action: utter_no_repair_required
@@ -57,9 +28,7 @@ stories:
   - intent: greet
   - action: action_greet
   - intent: repair
-  # - intent: repair_core
-  # - action: utter_repair_core
-  - action: action_repair
+  - action: action_faq
   - action: utter_did_that_help
   - intent: no_repair_required
   - action: utter_no_repair_required
@@ -111,10 +80,8 @@ stories:
   steps:
   - intent: greet
   - action: action_greet
-  # - intent: repair_hull 
-  # - action: action_repair_hull
   - intent: repair
-  - action: action_repair
+  - action: action_faq
   - action: utter_did_that_help
   - intent: no_repair_required
   - action: utter_no_repair_required
@@ -123,9 +90,9 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: demo
+- story: faq
   steps:
     - intent: greet
     - action: action_greet
-    - intent: demo_intent
-    - action: action_demo
+    - intent: faq
+    - action: action_faq
